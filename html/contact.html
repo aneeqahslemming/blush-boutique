@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact us</title>
+
+    <title>Contact Us | Blush Boutique</title>
+
+    <meta name="description" content="Contact Blush Boutique for questions about beauty and skincare products.">
+    <meta name="keywords" content="contact blush boutique, beauty store contact, skincare support">
+    <meta name="author" content="Aneeqah Slemming">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/jpeg" href="../images/favicon.jpg">
 </head>
+
 <body>
 
 <header class="header">
@@ -43,30 +52,34 @@
         Cape Town
     </a>
 </section>
-
 </main>
 
 <section class="contact-form">
 
-    <h2>Contact Us</h2>
+    <h2>Send Us a Message</h2>
 
-    <form>
-        <label>Name:</label><br>
-        <input type="text" placeholder="Your Name" required><br><br>
+    <form onsubmit="return validateForm()">
 
-        <label>Email:</label><br>
-        <input type="email" placeholder="Your Email" required><br><br>
+    <label>Name:</label><br>
+    <input type="text" id="name" placeholder="Your Name" required><br><br>
 
-        <label>Message:</label><br>
-        <textarea placeholder="Your Message"></textarea><br><br>
+    <label>Email:</label><br>
+    <input type="email" id="email" placeholder="Your Email" required><br><br>
 
-        <button type="submit" class="btn">Send Message</button>
+    <label>Message:</label><br>
+    <textarea id="message" placeholder="Your Message" required></textarea><br><br>
+
+    <button type="submit" class="btn">Send Message</button>
+
     </form>
 
 </section>
+
 <footer class="footer">
-    <p>&copy; 2026 Blush Boutique</p>
+    <p>&copy; <span id="year"></span> Blush Boutique</p>
 </footer>
+
+<script src="../javascript/script.js"></script>
 
 </body>
 </html>

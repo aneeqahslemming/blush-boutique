@@ -29,6 +29,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    background-color: #ffe4ec;
+    padding: 15px;
 }
 
 .nav a {
@@ -128,21 +130,56 @@ iframe {
     border-radius: 10px;
 }
 
-/* GALLERY GRID (3 ROWS - 2 IMAGES) */
+/* GALLERY GRID */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.gallery-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
+/* PRODUCT CARDS */
+.product-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGES */
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+/* PRODUCT NAMES */
+.product-card p {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #d63384;
+    font-size: 16px;
+}
+
+/* CONTACT FORM SECTION */
+.contact-form {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.contact-form h2 {
+    color: #d63384;
+    margin-bottom: 15px;
 }
 
 /* CONTACT FORM */
@@ -177,6 +214,44 @@ button {
 button:hover {
     background-color: #ff69b4;
 }
+/* PRODUCT CATEGORY LINKS */
+.categories a {
+    text-decoration: none;
+    color: #d63384;
+    font-weight: 600;
+    display: block;
+}
+
+.categories a:hover {
+    color: white;
+    background-color: #d63384;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+/* PRODUCT INFORMATION SECTIONS */
+.product-section {
+    background-color: white;
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-section h2 {
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.product-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-section li {
+    margin: 8px 0;
+}
 
 /* FOOTER */
 .footer {
@@ -185,4 +260,34 @@ button:hover {
     padding: 15px;
     margin-top: 30px;
     color: #333;
+}
+/* MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-img {
+        height: 250px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .logo {
+        width: 140px;
+    }
 }
